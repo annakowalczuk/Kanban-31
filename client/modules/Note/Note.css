@@ -1,1 +1,14 @@
 /* Note styles */
+.Note {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ced6e0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #ced6e0;  
+  margin: 10px;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #f1f2f6;
+  position: relative;
+}
