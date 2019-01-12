@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './Edit.css';
 import buttons from '../buttons.css';
 
 export default class Edit extends Component {
@@ -21,10 +20,10 @@ export default class Edit extends Component {
   }
   renderValue = () => {
     const { value, onDelete, onValueClick } = this.props;
-
+    
     return (
       <div>
-        <span className={styles.value} onClick={onValueClick}>{value}</span>
+        <span onClick={onValueClick}>{value}</span>
         {onDelete ? this.renderDelete() : null}
       </div>
     );

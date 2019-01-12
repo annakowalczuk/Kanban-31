@@ -41,8 +41,7 @@ export function deleteLane(req, res) {
           res.status(500).send(error);
         }
       });
-    }
-  );
+    });
 
     lane.remove(() => {
       res.status(200).end();
