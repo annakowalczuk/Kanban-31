@@ -20,7 +20,7 @@ export default class Edit extends Component {
   }
   renderValue = () => {
     const { value, onDelete, onValueClick } = this.props;
-    
+
     return (
       <div>
         <span onClick={onValueClick}>{value}</span>
