@@ -7,11 +7,11 @@ import { DropTarget } from 'react-dnd';
 import ItemTypes from '../Kanban/itemTypes';
 
 const noteTarget = {
-  hover(targetProps, monitor) {
+  drop(targetProps, monitor) {
     const sourceProps = monitor.getItem();
     const { id: noteId, laneId: sourceLaneId } = sourceProps;
 
-    if (!targetProps.lane.notes.length) {
+    if (targetProps.lane.id !== sourceLaneId) {
       targetProps.moveBetweenLanes(
         targetProps.lane.id,
         noteId,
